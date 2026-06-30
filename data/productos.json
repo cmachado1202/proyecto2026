@@ -1,0 +1,56 @@
+[
+  {
+    "id": "1",
+    "nombre": "Producto 1",
+    "precio": 1234,
+    "img": "img/goat.jpg"
+  },
+  {
+    "id": "2",
+    "nombre": "Producto 2",
+    "precio": 1234,
+    "img": "img/bonobont.jpg"
+  },
+  {
+    "id": "3",
+    "nombre": "Producto 3",
+    "precio": 1234,
+    "img": "img/mantecolt.jpg"
+  },
+  {
+    "id": "4",
+    "nombre": "Producto 4",
+    "precio": 5000,
+    "img": "img/trico.jpg"
+  },
+  {
+    "id": "5",
+    "nombre": "Producto 5",
+    "precio": 5000,
+    "img": "img/redbelvet.jpg"
+  },
+  {
+    "id": "6",
+    "nombre": "Producto 6",
+    "precio": 5000,
+    "img": "img/trishot.jpg"
+  },
+  {
+    "id": "7",
+    "nombre": "Producto 7",
+    "precio": 5000,
+    "img": "img/pescadoraul.jpg"
+  },
+  {
+    "id": "8",
+    "nombre": "Producto 8",
+    "precio": 5000,
+    "img": "img/terrabusi.jpg"
+  },
+  {
+    "id": "9",
+    "nombre": "Producto 9",
+    "precio": 5000,
+    "img": "img/milkasdlblanco.jpg"
+  }
+]

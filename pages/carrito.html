@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <meta name="description" content="Tienda online del Mundial de Alfajores" />
+    <meta
+      name="description"
+      content="Carrito de compras del Mundial de Alfajores"
+    />
 
     <link
       href="https://fonts.googleapis.com/css2?family=Elms+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
@@ -18,25 +21,25 @@
       crossorigin="anonymous"
     />
 
-    <link rel="stylesheet" href="./CSS/styles.css" />
+    <link rel="stylesheet" href="../CSS/styles.css" />
 
-    <title>Mundial de Alfajores</title>
+    <title>Carrito | Mundial de Alfajores</title>
   </head>
 
   <body>
     <header>
       <div class="div-logo">
-        <a href="./index.html" class="logo">
-          <img src="./img/logo.png" alt="Logo Mundial de Alfajores" />
+        <a href="../index.html" class="logo">
+          <img src="../img/logo.png" alt="Logo Mundial de Alfajores" />
         </a>
       </div>
 
       <nav class="header-nav" aria-label="Navegación principal">
         <ul>
-          <li><a href="./index.html">HOME</a></li>
-          <li><a href="./pages/contactos.html">CONTACTOS</a></li>
+          <li><a href="../index.html">HOME</a></li>
+          <li><a href="./contactos.html">CONTACTOS</a></li>
           <li>
-            <a href="./pages/carrito.html" class="carrito-icono">
+            <a href="./carrito.html" class="carrito-icono">
               🛒
               <span
                 id="contador-carrito"
@@ -51,29 +54,23 @@
     </header>
 
     <main class="container py-4">
-      <h1 class="titulo-home text-secondary text-center">
-        Bienvenido a la tienda
-      </h1>
+      <h1 class="text-center">Carrito de compras</h1>
 
-      <p class="parrafo">
-        En nuestra tienda vas a encontrar los alfajores finalistas y más
-        destacados del Mundial del Alfajor. Reunimos las marcas y sabores más
-        buscados del país para que puedas probar los mejores alfajores en un
-        solo lugar. Desde clásicos triples hasta ediciones especiales y sabores
-        innovadores, tenemos opciones para todos los fanáticos del alfajor. Hacé
-        tu pedido desde cualquier parte del país y recibí los alfajores
-        campeones directo en tu casa.
-      </p>
-
-      <section>
-        <h2 class="titulo-productos text-secondary text-center">
-          Nuestros productos
-        </h2>
-
-        <div id="contenedor-tarjetas" class="contenedor-tarjetas">
-          <!-- Productos creados desde index.js -->
-        </div>
+      <section
+        id="contenedor-carrito"
+        class="contenedor-tarjetas"
+        aria-label="Productos agregados al carrito"
+      >
+        <!-- Productos creados desde carrito.js -->
       </section>
+
+      <section id="resumen-carrito" aria-label="Resumen de compra">
+        <!-- Total creado desde carrito.js -->
+      </section>
+
+      <div id="acciones-carrito" class="acciones-carrito">
+        <!-- Botones creados desde carrito.js -->
+      </div>
     </main>
 
     <footer>
@@ -82,10 +79,10 @@
       <nav aria-label="Redes sociales">
         <ul class="footer-list">
           <li>
-            <img src="./img/whatsapp.png" alt="Logo de WhatsApp" />
+            <img src="../img/whatsapp.png" alt="Logo de WhatsApp" />
           </li>
           <li>
-            <img src="./img/insta.png" alt="Logo de Instagram" />
+            <img src="../img/insta.png" alt="Logo de Instagram" />
           </li>
         </ul>
       </nav>
@@ -97,6 +94,6 @@
       crossorigin="anonymous"
     ></script>
 
-    <script src="./js/index.js" type="module"></script>
+    <script type="module" src="../js/carrito.js"></script>
   </body>
 </html>
