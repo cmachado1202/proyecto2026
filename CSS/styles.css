@@ -1,4 +1,4 @@
-* {
+﻿* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -296,4 +296,52 @@ footer .footer-list {
   main {
     width: 95%;
   }
+}
+/* --------------------------------------------------------------------------------------------------------------------------- */
+/*                                                       carrito                                                               */
+/*---------------------------------------------------------------------------------------------------------------------------- */
+.mensaje-carrito-vacio {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.acciones-carrito {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+#resumen-carrito {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.total-carrito {
+  background-color: rgb(55, 52, 99);
+  color: white;
+  padding: 1.5rem 2.5rem;
+  border-radius: 1rem;
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+
+.cantidad-producto,
+.subtotal-producto {
+  font-weight: 600;
+}
+
+.stock-producto {
+  font-weight: bold;
+}
+
+.sin-stock {
+  color: #b00020;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
