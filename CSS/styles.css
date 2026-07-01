@@ -6,30 +6,33 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: "Elms", sans-serif;
   font-size: 1.6rem;
-
   background: linear-gradient(180deg, #eaf7ff 0%, #ffffff 55%, #dff3ff 100%);
-  color: white;
+  color: rgb(70, 70, 117);
 
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 main {
   width: 80%;
   margin: auto;
   padding-bottom: 2rem;
-
   flex: 1;
 
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+section {
+  width: 100%;
 }
 
 h1 {
@@ -49,13 +52,22 @@ h2 {
   margin: 3rem 0;
 }
 
+h3 {
+  font-size: 1.9rem;
+}
+
 .btn {
   border: none;
   font-size: 1.6rem;
   font-weight: bold;
-  padding: 1.6rem;
+  padding: 1.2rem 1.6rem;
   border-radius: 1rem;
   cursor: pointer;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 header,
@@ -66,6 +78,10 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+footer {
+  padding: 1rem 2rem;
 }
 
 .div-logo {
@@ -85,15 +101,15 @@ footer {
   display: block;
 }
 
+.header-nav {
+  margin-right: 2rem;
+}
+
 .header-nav ul {
   list-style: none;
   display: flex;
-  gap: 3rem;
+  gap: 2rem;
   align-items: center;
-}
-
-.header-nav {
-  margin-right: 2rem;
 }
 
 .header-nav a {
@@ -107,16 +123,18 @@ footer {
     color 0.2s;
 }
 
-.header-nav a:hover {
+.header-nav a:hover,
+.header-nav a:focus-visible {
   background: rgba(255, 255, 255, 0.15);
   color: #ffffff;
+  outline: none;
 }
 
-.header-nav,
-footer .footer-list {
+.footer-list {
   list-style: none;
   display: flex;
   gap: 2rem;
+  align-items: center;
 }
 
 .footer-list img {
@@ -124,28 +142,30 @@ footer .footer-list {
   padding: 0.5rem;
 }
 
-/* --------------------------------------------------------------------------------------------------------------------------- */
-/*                                                         COLORES                                                             */
-/*---------------------------------------------------------------------------------------------------------------------------- */
+/* COLORES */
+
 .bg-primary {
   background-color: rgb(80, 106, 255);
 }
-.bg-seconday {
-  background-color: rgb(70, 69, 71);
+
+.bg-secondary {
+  background-color: rgb(203, 204, 223);
 }
+
 .text-light {
   color: rgb(222, 224, 230);
 }
+
 .text-dark {
   color: black;
 }
+
 .text-secondary {
   color: rgb(104, 115, 151);
 }
 
-/* --------------------------------------------------------------------------------------------------------------------------- */
-/*                                                        HOME                                                                 */
-/*---------------------------------------------------------------------------------------------------------------------------- */
+/* HOME */
+
 .parrafo {
   width: 80%;
   text-align: center;
@@ -156,9 +176,7 @@ footer .footer-list {
 
 .contenedor-tarjetas {
   margin-top: 2rem;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-
+  display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 2rem;
@@ -173,8 +191,8 @@ footer .footer-list {
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  padding-bottom: 2rem;
-  padding-top: 1.5rem;
+  padding: 1.5rem 1.5rem 2rem;
+  text-align: center;
 }
 
 .card img {
@@ -183,15 +201,62 @@ footer .footer-list {
   object-fit: contain;
 }
 
-/* --------------------------------------------------------------------------------------------------------------------------- */
-/*                                                        CONTACTOS                                                            */
-/*---------------------------------------------------------------------------------------------------------------------------- */
+.card p {
+  font-size: 1.6rem;
+}
+
+.stock-producto {
+  font-weight: bold;
+}
+
+.sin-stock {
+  color: #b00020;
+}
+
+/* RESEÑAS */
+
+.seccion-resenas {
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+}
+
+.contenedor-resenas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.resena {
+  background-color: rgb(203, 204, 223);
+  color: rgb(70, 70, 117);
+  border-radius: 1rem;
+  padding: 2rem;
+  text-align: center;
+  min-height: 16rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.resena h3 {
+  color: rgb(37, 15, 236);
+}
+
+/* CONTACTOS */
+
 .titulo-contacto {
   margin: 2rem 0;
   color: rgb(37, 15, 236);
 }
 
-/* FIX: formulario oscuro/moderno */
+.seccion-contacto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .form-contacto {
   background-color: #1e1e2e;
   color: #e0e0f0;
@@ -215,15 +280,13 @@ footer .footer-list {
 
 .grupo-input label {
   color: #a9b0d0;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-weight: 600;
-  display: flex;
-  flex-direction: column;
-  gap: 0.8rem;
 }
 
 .grupo-input input,
 .grupo-input textarea {
+  width: 100%;
   background-color: #2a2a3e;
   color: #e0e0f0;
   border: none;
@@ -245,6 +308,12 @@ footer .footer-list {
   min-height: 12rem;
 }
 
+#mensaje-formulario {
+  min-height: 2rem;
+  color: #ffffff;
+  font-size: 1.5rem;
+}
+
 .form-contacto button[type="submit"] {
   background-color: #6c63ff;
   color: #ffffff;
@@ -260,46 +329,15 @@ footer .footer-list {
     transform 0.1s;
 }
 
-.form-contacto button[type="submit"]:hover {
+.form-contacto button[type="submit"]:hover,
+.form-contacto button[type="submit"]:focus-visible {
   background-color: #7b74ff;
   transform: translateY(-2px);
+  outline: none;
 }
 
-/* --------------------------------------------------------------------------------------------------------------------------- */
-/*                                                       MEDIAS QUERIES                                                        */
-/*---------------------------------------------------------------------------------------------------------------------------- */
-@media (max-width: 900px) {
-  .contenedor-tarjetas {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
+/* CARRITO */
 
-@media (max-width: 600px) {
-  header,
-  footer {
-    flex-direction: column;
-  }
-
-  .header-nav,
-  .div-logo {
-    margin: 0;
-  }
-
-  .contenedor-tarjetas {
-    grid-template-columns: 1fr;
-  }
-
-  .card {
-    width: 100%;
-  }
-
-  main {
-    width: 95%;
-  }
-}
-/* --------------------------------------------------------------------------------------------------------------------------- */
-/*                                                       carrito                                                               */
-/*---------------------------------------------------------------------------------------------------------------------------- */
 .mensaje-carrito-vacio {
   font-size: 2.5rem;
   text-align: center;
@@ -333,15 +371,62 @@ footer .footer-list {
   font-weight: 600;
 }
 
-.stock-producto {
-  font-weight: bold;
+/* MEDIA QUERIES */
+
+@media (max-width: 900px) {
+  .contenedor-resenas {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .parrafo {
+    width: 100%;
+  }
 }
 
-.sin-stock {
-  color: #b00020;
-}
+@media (max-width: 600px) {
+  header,
+  footer {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
 
-.btn:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
+  .header-nav,
+  .div-logo {
+    margin: 0;
+  }
+
+  .header-nav ul {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  main {
+    width: 95%;
+  }
+
+  .parrafo {
+    width: 100%;
+    padding: 2rem 1rem;
+    font-size: 1.8rem;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 34rem;
+  }
+
+  .contenedor-resenas {
+    grid-template-columns: 1fr;
+  }
+
+  .form-contacto {
+    padding: 2rem;
+  }
+
+  .form-contacto button[type="submit"] {
+    width: 100%;
+    align-self: stretch;
+  }
 }

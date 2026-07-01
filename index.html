@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <meta name="description" content="Tienda online del Mundial de Alfajores" />
+    <meta
+      name="description"
+      content="Tienda online del Mundial de Alfajores con productos destacados, carrito de compras y envíos a todo el país."
+    />
 
     <link
       href="https://fonts.googleapis.com/css2?family=Elms+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
@@ -20,7 +23,7 @@
 
     <link rel="stylesheet" href="./CSS/styles.css" />
 
-    <title>Mundial de Alfajores</title>
+    <title>Mundial de Alfajores | Tienda online</title>
   </head>
 
   <body>
@@ -33,11 +36,16 @@
 
       <nav class="header-nav" aria-label="Navegación principal">
         <ul>
-          <li><a href="./index.html">HOME</a></li>
+          <li><a href="#inicio">HOME</a></li>
+          <li><a href="#productos">PRODUCTOS</a></li>
           <li><a href="./pages/contactos.html">CONTACTOS</a></li>
           <li>
-            <a href="./pages/carrito.html" class="carrito-icono">
-              🛒­
+            <a
+              href="./pages/carrito.html"
+              class="carrito-icono"
+              aria-label="Ver carrito de compras"
+            >
+              🛒
               <span
                 id="contador-carrito"
                 class="badge rounded-pill text-bg-light"
@@ -50,7 +58,7 @@
       </nav>
     </header>
 
-    <main class="container py-4">
+    <main id="inicio" class="container py-4">
       <h1 class="titulo-home text-secondary text-center">
         Bienvenido a la tienda
       </h1>
@@ -65,13 +73,48 @@
         campeones directo en tu casa.
       </p>
 
-      <section>
-        <h2 class="titulo-productos text-secondary text-center">
+      <section id="productos" aria-labelledby="titulo-productos">
+        <h2
+          id="titulo-productos"
+          class="titulo-productos text-secondary text-center"
+        >
           Nuestros productos
         </h2>
 
         <div id="contenedor-tarjetas" class="contenedor-tarjetas">
           <!-- Productos creados desde index.js -->
+        </div>
+      </section>
+
+      <section class="seccion-resenas" aria-labelledby="titulo-resenas">
+        <h2
+          id="titulo-resenas"
+          class="titulo-productos text-secondary text-center"
+        >
+          Reseñas de clientes
+        </h2>
+
+        <div class="contenedor-resenas">
+          <article class="resena">
+            <h3>María</h3>
+            <p>
+              Muy ricos y llegaron rápido. El alfajor de Mantecol fue mi
+              favorito.
+            </p>
+          </article>
+
+          <article class="resena">
+            <h3>Juan</h3>
+            <p>
+              Me gustó poder elegir varios sabores y ver el total antes de
+              comprar.
+            </p>
+          </article>
+
+          <article class="resena">
+            <h3>Lucía</h3>
+            <p>La página es fácil de usar y los productos se ven muy bien.</p>
+          </article>
         </div>
       </section>
     </main>

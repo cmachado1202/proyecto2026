@@ -1,21 +1,28 @@
 ﻿<!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Ponete en contacto con Mundial de Alfajores para consultas sobre productos y pedidos."
+    />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Elms+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-      crossorigin="anonymous"
     />
+
     <link rel="stylesheet" href="../CSS/styles.css" />
-    <title>Contactos</title>
+
+    <title>Contacto | Mundial de Alfajores</title>
   </head>
+
   <body>
     <header>
       <div class="div-logo">
@@ -23,51 +30,98 @@
           <img src="../img/logo.png" alt="Logo Mundial de Alfajores" />
         </a>
       </div>
-      <nav class="header-nav">
+
+      <nav class="header-nav" aria-label="Navegación principal">
         <ul>
           <li><a href="../index.html">HOME</a></li>
-          <li><a href="./contactos.html">CONTACTOS</a></li>
           <li>
-            <a href="./carrito.html" class="carrito-icono">
-              🛒­ <span id="contador-carrito">0</span>
+            <a href="./contactos.html" aria-current="page">CONTACTOS</a>
+          </li>
+          <li>
+            <a
+              href="./carrito.html"
+              class="carrito-icono"
+              aria-label="Ver carrito"
+            >
+              <span aria-hidden="true">🛒</span>
+              <span id="contador-carrito" aria-live="polite">0</span>
             </a>
           </li>
         </ul>
       </nav>
     </header>
-    <main>
-      <h1 class="titulo-contacto text-secondary">Contactanos</h1>
 
-      <form
-        class="form-contacto"
-        action="https://formspree.io/f/mvzlwjzb"
-        method="POST"
-      >
-        <div class="grupo-input">
-          <label>
-            Your email:
-            <input type="email" name="email" />
-          </label>
-        </div>
-        <div class="grupo-input">
-          <label>
-            Your message:
-            <textarea name="message"></textarea>
-          </label>
-        </div>
-        <!-- your other form fields go here -->
-        <button type="submit">Send</button>
-      </form>
+    <main>
+      <section class="seccion-contacto" aria-labelledby="titulo-contacto">
+        <h1 id="titulo-contacto" class="titulo-contacto text-secondary">
+          Contactanos
+        </h1>
+
+        <p class="parrafo">
+          Dejanos tu consulta y nos vamos a comunicar con vos.
+        </p>
+
+        <form
+          id="form-contacto"
+          class="form-contacto"
+          action="https://formspree.io/f/mvzlwjzb"
+          method="POST"
+          novalidate
+        >
+          <div class="grupo-input">
+            <label for="nombre">Nombre</label>
+            <input
+              id="nombre"
+              type="text"
+              name="nombre"
+              autocomplete="name"
+              minlength="2"
+              required
+            />
+          </div>
+
+          <div class="grupo-input">
+            <label for="email">Correo electrónico</label>
+            <input
+              id="email"
+              type="email"
+              name="email"
+              autocomplete="email"
+              required
+            />
+          </div>
+
+          <div class="grupo-input">
+            <label for="mensaje">Mensaje</label>
+            <textarea
+              id="mensaje"
+              name="message"
+              rows="6"
+              minlength="10"
+              required
+            ></textarea>
+          </div>
+
+          <p id="mensaje-formulario" aria-live="polite"></p>
+
+          <button type="submit" class="btn bg-secondary text-dark">
+            Enviar consulta
+          </button>
+        </form>
+      </section>
     </main>
+
     <footer>
       <p>Sitio realizado para proyecto</p>
-      <nav>
+
+      <nav aria-label="Redes sociales">
         <ul class="footer-list">
-          <li><img src="../img/whatsapp.png" alt="logo-whatsapp" /></li>
-          <li><img src="../img/insta.png" alt="logo-instagram" /></li>
+          <li><img src="../img/whatsapp.png" alt="WhatsApp" /></li>
+          <li><img src="../img/insta.png" alt="Instagram" /></li>
         </ul>
       </nav>
     </footer>
-    <script type="module" src="../js/carrito.js"></script>
+
+    <script type="module" src="../js/contacto.js"></script>
   </body>
 </html>
